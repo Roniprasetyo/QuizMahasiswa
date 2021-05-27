@@ -21,11 +21,11 @@ namespace QuizMahasiswa
 
         private void MasterBarang024_Load(object sender, EventArgs e)
         {
-            ll();
+            tampil();
             
         }
 
-        private void ll()
+        private void tampil()
         {
             // TODO: This line of code loads data into the 'barangDataSet.tbl_barang' table. You can move, or remove it, as needed.
             this.tbl_barangTableAdapter.Fill(this.barangDataSet.tbl_barang);
@@ -63,7 +63,7 @@ namespace QuizMahasiswa
             txtNamaBarang.Clear();
             txtStock.Clear();
             cbSupplier.SelectedIndex = -1;
-            ll();
+            tampil();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -73,7 +73,7 @@ namespace QuizMahasiswa
             txtNamaBarang.Clear();
             txtStock.Clear();
             cbSupplier.SelectedIndex = -1;
-            ll();
+            tampil();
         }
 
         private void txtHarga_KeyPress(object sender, KeyPressEventArgs e)

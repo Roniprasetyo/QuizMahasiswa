@@ -30,19 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnExportExcel = new System.Windows.Forms.Button();
-            this.btnExportPdf = new System.Windows.Forms.Button();
-            this.barangDataSet = new QuizMahasiswa.BarangDataSet();
-            this.tblbarangBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tbl_barangTableAdapter = new QuizMahasiswa.BarangDataSetTableAdapters.tbl_barangTableAdapter();
             this.idbarangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namabarangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hargaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namasupplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblbarangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.barangDataSet = new QuizMahasiswa.BarangDataSet();
+            this.btnExportExcel = new System.Windows.Forms.Button();
+            this.btnExportPdf = new System.Windows.Forms.Button();
+            this.tbl_barangTableAdapter = new QuizMahasiswa.BarangDataSetTableAdapters.tbl_barangTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barangDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblbarangBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barangDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -63,42 +64,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(717, 292);
             this.dataGridView1.TabIndex = 7;
-            // 
-            // btnExportExcel
-            // 
-            this.btnExportExcel.Location = new System.Drawing.Point(486, 72);
-            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnExportExcel.Name = "btnExportExcel";
-            this.btnExportExcel.Size = new System.Drawing.Size(132, 49);
-            this.btnExportExcel.TabIndex = 5;
-            this.btnExportExcel.Text = "Export Excel";
-            this.btnExportExcel.UseVisualStyleBackColor = true;
-            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
-            // 
-            // btnExportPdf
-            // 
-            this.btnExportPdf.Location = new System.Drawing.Point(276, 72);
-            this.btnExportPdf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnExportPdf.Name = "btnExportPdf";
-            this.btnExportPdf.Size = new System.Drawing.Size(132, 49);
-            this.btnExportPdf.TabIndex = 6;
-            this.btnExportPdf.Text = "Export PDF";
-            this.btnExportPdf.UseVisualStyleBackColor = true;
-            this.btnExportPdf.Click += new System.EventHandler(this.btnExportPdf_Click);
-            // 
-            // barangDataSet
-            // 
-            this.barangDataSet.DataSetName = "BarangDataSet";
-            this.barangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblbarangBindingSource
-            // 
-            this.tblbarangBindingSource.DataMember = "tbl_barang";
-            this.tblbarangBindingSource.DataSource = this.barangDataSet;
-            // 
-            // tbl_barangTableAdapter
-            // 
-            this.tbl_barangTableAdapter.ClearBeforeFill = true;
             // 
             // idbarangDataGridViewTextBoxColumn
             // 
@@ -130,11 +95,58 @@
             this.namasupplierDataGridViewTextBoxColumn.HeaderText = "Nama Supplier";
             this.namasupplierDataGridViewTextBoxColumn.Name = "namasupplierDataGridViewTextBoxColumn";
             // 
+            // tblbarangBindingSource
+            // 
+            this.tblbarangBindingSource.DataMember = "tbl_barang";
+            this.tblbarangBindingSource.DataSource = this.barangDataSet;
+            // 
+            // barangDataSet
+            // 
+            this.barangDataSet.DataSetName = "BarangDataSet";
+            this.barangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.Location = new System.Drawing.Point(491, 85);
+            this.btnExportExcel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(132, 49);
+            this.btnExportExcel.TabIndex = 5;
+            this.btnExportExcel.Text = "Export Excel";
+            this.btnExportExcel.UseVisualStyleBackColor = true;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
+            // 
+            // btnExportPdf
+            // 
+            this.btnExportPdf.Location = new System.Drawing.Point(276, 85);
+            this.btnExportPdf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnExportPdf.Name = "btnExportPdf";
+            this.btnExportPdf.Size = new System.Drawing.Size(132, 49);
+            this.btnExportPdf.TabIndex = 6;
+            this.btnExportPdf.Text = "Export PDF";
+            this.btnExportPdf.UseVisualStyleBackColor = true;
+            this.btnExportPdf.Click += new System.EventHandler(this.btnExportPdf_Click);
+            // 
+            // tbl_barangTableAdapter
+            // 
+            this.tbl_barangTableAdapter.ClearBeforeFill = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(371, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(199, 32);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Report Barang";
+            // 
             // ReportBarang004
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 562);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnExportExcel);
             this.Controls.Add(this.btnExportPdf);
@@ -143,9 +155,10 @@
             this.Text = "ReportBarang004";
             this.Load += new System.EventHandler(this.ReportBarang004_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barangDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblbarangBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barangDataSet)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -162,5 +175,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn hargaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namasupplierDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
     }
 }
