@@ -80,7 +80,7 @@ namespace QuizMahasiswa
             Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
             Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
             Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
-            worksheet = workbook.Sheets["ReportBarang"];
+            worksheet = workbook.Sheets["Sheet1"];
             worksheet = workbook.ActiveSheet;
 
             for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
