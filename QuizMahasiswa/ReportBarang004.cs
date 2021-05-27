@@ -80,7 +80,7 @@ namespace QuizMahasiswa
             Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
             Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
             Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
-            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.Sheets["ReportBarang"];
             worksheet = workbook.ActiveSheet;
 
             for (int i = 1; i < dataGridView1.Columns.Count + 1; i++)
@@ -101,10 +101,17 @@ namespace QuizMahasiswa
 
             if (saveFileDialogeExcel.ShowDialog() == DialogResult.OK)
             {
-                workbook.SaveAs(saveFileDialogeExcel.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-                    Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+                workbook.SaveAs(saveFileDialogeExcel.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+
             }
             app.Quit();
+        }
+
+        private void ReportBarang004_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'barangDataSet.tbl_barang' table. You can move, or remove it, as needed.
+            this.tbl_barangTableAdapter.Fill(this.barangDataSet.tbl_barang);
+
         }
     }
 }

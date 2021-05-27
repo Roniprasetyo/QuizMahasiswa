@@ -65,6 +65,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="ProgramBarang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramBarang.Designer.cs">
+      <DependentUpon>ProgramBarang.cs</DependentUpon>
+    </Compile>
     <Compile Include="MasterBarang024.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     <Compile Include="ReportBarang004.Designer.cs">
       <DependentUpon>ReportBarang004.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ProgramBarang.resx">
+      <DependentUpon>ProgramBarang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MasterBarang024.resx">
       <DependentUpon>MasterBarang024.cs</DependentUpon>
     </EmbeddedResource>
